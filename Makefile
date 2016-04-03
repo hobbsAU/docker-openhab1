@@ -19,13 +19,13 @@ build:
 
 
 run: 
-	@if [ -z "`docker ps -q -f name=$(CONTAINER_RUN)`" ]; \
+	if [ -z "`docker ps -q -f name=$(CONTAINER_RUN)`" ]; \
 	then \
 		docker pull $(CONTAINER_REPO); \
 		docker run -d \
  		--restart=always \
  		--net="host" \
- 		-v $(CONFIG_BIN)$(CONFIG_VOL) \
+ 		-v $(CONFIG_BIND)$(CONFIG_VOL) \
  		--name $(CONTAINER_RUN) \
  		$(CONTAINER_REPO); \
 	else \
