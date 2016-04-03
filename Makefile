@@ -10,7 +10,7 @@ CONFIG_VOL = /opt/openhab
 # This should point to the host directory containing the openhab config. The host directory must be owned by UID:GID 1000:1000. The format is /host/directory:
 CONFIG_BIND = /srv/openhab1:
 
-TRIGGER_URL = https://registry.hub.docker.com/u/hobbsau/docker-openhab1/trigger/9e4a806f-cab2-40e7-9b62-ddffe3d198a0/
+TRIGGER_URL = https://registry.hub.docker.com/u/hobbsau/openhab1/trigger/f88d187e-e22c-498e-a78e-3c68b41992f5/
 
 build:
 	@curl --data build=true -X POST $(TRIGGER_URL) 
