@@ -9,6 +9,8 @@ RUN	apk add --no-cache $PACKAGE && \
 	# Add a user to run as non root
 	adduser -D -g '' openhab
 
+# Add certificates
+ADD cacerts /opt/jdk/jre/lib/security/
 USER openhab
 WORKDIR /opt/openhab
 
