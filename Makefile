@@ -14,8 +14,6 @@ TRIGGER_URL = https://registry.hub.docker.com/u/hobbsau/openhab1/trigger/f88d187
 
 build:
 	@curl --data build=true -X POST $(TRIGGER_URL) 
-	@sleep 60
-	@docker pull $(CONTAINER_REPO)
 
 
 run: 
